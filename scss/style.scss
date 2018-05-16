@@ -1,0 +1,15 @@
+.btn{margin:10px 0;}
+.logo img{width:100%;}
+.logo{display:flex;flex-direction:row}
+h1{font-size:3rem;}
+
+@media (min-width:601px){
+    .logo{display:flex;flex-direction:row}
+    html {
+        font-size: calc(.5vw + .5vh + .5vmin + .5vmax / (14 * 100)) !important;
+    }
+}
+.red-text{color:#ff0000;display:inline;}
+label{font-weight:bolder;}
+html{font-size:3.5vw;}
+#output,#input{font-size:14px;}

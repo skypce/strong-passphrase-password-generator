@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strong passphrase password generator</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <meta name="description" content="Strong passphrase password generator, generates secure password generator using md5sum and ruby-ascii85 using a passphrase. You only need to remember your password and use the generated.">
+
+
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  <link rel="manifest" href="manifest.json"></link>
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="logo row valign-wrapper">
+      <div class="col s4 m3 l2">
+        <img src="img/logo.png" class="" alt="">
+      </div>
+      <h1 class="col s8 m9 l10">Strong Passphrase Password Generator</h1>
+    </header>
+    <div class="row">
+      <div class="col s12">
+
+        <div class="row">
+          <div class="input-field">
+            <input placeholder="Name of the account for your password" id="name" type="text" class="">
+
+
+            <label for="input">The name of the service associated to you password</label>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <input placeholder="Add your passphrasse password" id="input" type="text" class="">
+
+
+            <label for="input">Your input passphrasse password:</label>
+
+          </div>
+        </div>
+        <div class="row amount">
+          <label id="length" for="range">The length of the password: <output id="amount" name="amount" for="rangeInput">40</output> characters</label>
+          <p class="range-field">
+            <input type="range" id="range" min="4" max="40"/>
+          </p>
+          
+
+        </div>
+        <div class="row">
+        </div>
+        <button id="ownPass" class="btn btn-primary">Your Own entropy Password</button>
+
+        <button id="bip39en" class="btn btn-primary">Random English Bip39 Seed</button>
+        <button id="bip39es" class="btn btn-primary">Random Spanish Bip39 Seed</button> 
+
+        <div class="row">
+          <div class="input-field">
+            <input placeholder="Your passphrasse password is" id="output" type="text" class="">
+            <label for="output">Your output passphrasse password is:</label>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <!---<button id="submit" class="btn btn-primary">Generate Password</button>-->
+            <div class="">
+              <button class="btn btn-primary" id="ctc" data-clipboard-action="copy" data-clipboard-target="#output">Copy generated password to clipboard</button>
+            </div>
+            <p id="cmdPrint">This is equivalent to do from console the next command:
+              <br>
+              <span id="cmd" class="red-text">echo -n "<span id="pass"></span>" | sha256sum | cut -c 1-32 | ascii85 | cut -c 3-<span id="rs"></span>
+              </span>
+              <br>
+              <button id="cpCmd" class="btn btn-primary" data-clipboard-action="copy" data-clipboard-target="#cmd">Copy console command to clipboard</button>
+              <br>
+              <button id="pdf" class="btn btn-primary">Export to PDF File</button>
+              <br>
+            </p>
+            <p class="errata">You can control the length of password with the cut command parameter. Where the password will be the characters
+              between the n1-n2 numbers.</p>
+          </div>
+          <div class="col s12 m6 l6">
+            <span>QR Code</span>
+            <div id="qrcode"></div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+      <p>The generator do not store any password in database (it do not use database), it is a secure and reliable service. The name of service associated is for the only purpose of generate the PDF report for you can see for what service is the password.</p>
+
+    </div>
+    <footer>
+      <p class="center">Copyleft skypce@gmail.com</p>
+
+    </footer>
+
+
+
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/cryptojs.js"></script>
+    <script src="js/sha256.js"></script>
+    <script src="js/unorm.js"></script>
+    <script src="js/sjcl-bip39.js"></script>
+    <script src="js/wordlist_english.js"></script>
+    <script src="js/wordlist_spanish.js"></script>
+    <script src="js/jsbip39.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/ascii85c.js"></script>
+    <script src="js/qrcode.js"></script>
+    <script src="js/printThis.js"></script>
+    <script src="js/index1.js"></script>
+
+
+</body>
+
+</html>

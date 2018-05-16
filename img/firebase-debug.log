@@ -1,0 +1,18 @@
+[debug] [2018-05-01T02:05:33.218Z] ----------------------------------------------------------------------
+[debug] [2018-05-01T02:05:33.221Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2018-05-01T02:05:33.222Z] CLI Version:   3.18.4
+[debug] [2018-05-01T02:05:33.222Z] Platform:      linux
+[debug] [2018-05-01T02:05:33.222Z] Node Version:  v6.14.1
+[debug] [2018-05-01T02:05:33.222Z] Time:          Mon Apr 30 2018 23:05:33 GMT-0300 (-03)
+[debug] [2018-05-01T02:05:33.222Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-01T02:05:33.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-01T02:05:33.237Z] > authorizing via signed-in user
+[debug] [2018-05-01T02:05:33.240Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/strong-password-generator  
+  
+ Mon Apr 30 2018 23:05:33 GMT-0300 (-03)
+[debug] [2018-05-01T02:05:34.421Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-01T02:05:34.423Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/strong-password-generator/tokens  
+  
+ Mon Apr 30 2018 23:05:34 GMT-0300 (-03)
+[debug] [2018-05-01T02:05:35.418Z] <<< HTTP RESPONSE 200

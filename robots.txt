@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strong passphrase password generator</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/clipboard.min.js"></script>
+    <meta name="description" content="Strong passphrase password generator">
+  </head>
+  <body>
+
+    <canvas id="stars"></canvas>
+
+
+
+   <!--   <canvas id="demo-canvas"></canvas>-->
+
+    </div>
+
+      <div class="container">
+        <h1>Strong passphrase password generator</h1>
+        <div class="field">
+          <b>Passphrase:</b>
+          <input id="input" type="text">
+        </div>
+        <div class="field">
+          <b>Generated Password</b>
+          <input type="text" id="output">
+        </div>
+        <button id="submit">Generate Password</button>
+        <button id="ctc" data-clipboard-action="cut" data-clipboard-target="#output">Copy to Clipboard</button>
+      </div>
+
+ 
+
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+  
+
+     <script  src="js/index.js"></script>
+  </body>
+</html>
